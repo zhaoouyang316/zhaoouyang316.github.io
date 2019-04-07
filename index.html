@@ -274,6 +274,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/07/blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/07/blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -300,8 +310,8 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直以来都有写文章的习惯，不管是收集资料还是发表个人见解，最开始把文章都放在有道笔记，但是有道笔记有个不好的点就是不便于分享，后来搭建了GitBook，但是里面的界面不太美观。后来接触到了CSDN,但是太多的广告。后来接触到了GitHub-Pages+Hexo，不需要服务器，而且免费。</p>
-<h3 id="为什么要用Hexo"><a href="#为什么要用Hexo" class="headerlink" title="为什么要用Hexo?"></a>为什么要用Hexo?</h3><p>Hexo是一个快速、简洁且高效的博客框架，可以在极短的时间一键生成所有的静态页面，支持 Markdown，丰富的插件，一键部署到GitHub Pages, Heroku 或其他网站。</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直都有写文章的习惯，不管是收集资料还是发表个人见解，最开始把文章都放在有道笔记，但有道笔记有个不好的点就是不便分享，后来搭建了GitBook，但里面界面不太美观。后来接触到了GitHub-Pages+Hexo，不需要服务器，而且免费。</p>
+<h3 id="为什么要用Hexo"><a href="#为什么要用Hexo" class="headerlink" title="为什么要用Hexo?"></a>为什么要用Hexo?</h3><p>Hexo是一个快速、简洁且高效的博客框架，可以在极短时间一键生成所有的静态页面，支持 Markdown，丰富的插件，一键部署到GitHub Pages, Heroku 或其他网站。</p>
 <h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h3><p>Node.js是国外的网站，下载的服务可能不太友好，可以去国内的Nodejs中文官网下载，选择适合自己的版本安装就好了，安装过程只需要下一步下一步。网址：<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
 <p><img src="http://ppl5t3mrt.bkt.clouddn.com/image/owen/blog/WX20190407-182542@2x.png" alt="avatar"></p>
 <p>检查安装是否成功</p>
@@ -324,57 +334,81 @@ cd &lt;folder&gt;
 cd blog
 </code></pre><p><img src="http://ppl5t3mrt.bkt.clouddn.com/image/owen/blog/WX20190407-184013@2x.png" alt="avatar"></p>
 <h3 id="网站目录介绍"><a href="#网站目录介绍" class="headerlink" title="网站目录介绍"></a>网站目录介绍</h3><p><img src="http://ppl5t3mrt.bkt.clouddn.com/image/owen/blog/WX20190407-184208@2x.png" alt="avatar"></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>source_dir</code></td>
-<td style="text-align:left">资源文件夹，这个文件夹用来存放内容。</td>
-<td style="text-align:left"><code>source</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>public_dir</code></td>
-<td style="text-align:left">公共文件夹，这个文件夹用于存放生成的站点文件。</td>
-<td style="text-align:left"><code>public</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>tag_dir</code></td>
-<td style="text-align:left">标签文件夹</td>
-<td style="text-align:left"><code>tags</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>archive_dir</code></td>
-<td style="text-align:left">归档文件夹</td>
-<td style="text-align:left"><code>archives</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>category_dir</code></td>
-<td style="text-align:left">分类文件夹</td>
-<td style="text-align:left"><code>categories</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>code_dir</code></td>
-<td style="text-align:left">Include code 文件夹</td>
-<td style="text-align:left"><code>downloads/code</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>i18n_dir</code></td>
-<td style="text-align:left">国际化（i18n）文件夹</td>
-<td style="text-align:left"><code>:lang</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>skip_render</code></td>
-<td style="text-align:left">跳过指定文件的渲染，您可使用 <a href="https://github.com/isaacs/node-glob" target="_blank" rel="noopener">glob 表达式</a>来匹配路径。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h3><h3 id="网站本地效果"><a href="#网站本地效果" class="headerlink" title="网站本地效果"></a>网站本地效果</h3><h3 id="博客Github部署"><a href="#博客Github部署" class="headerlink" title="博客Github部署"></a>博客Github部署</h3><h3 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH-Key"></a>配置SSH-Key</h3><h3 id="同步本地代码至GitHub"><a href="#同步本地代码至GitHub" class="headerlink" title="同步本地代码至GitHub"></a>同步本地代码至GitHub</h3><h3 id="打开GitHub-Pages"><a href="#打开GitHub-Pages" class="headerlink" title="打开GitHub-Pages"></a>打开GitHub-Pages</h3><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3>
+<p>config.yml：博客的配置文件，博客的名称、关键词、作者、语言、博客主题…设置都在里面。</p>
+<p>package-lock.json：应用程序信息，插件相关，不用关注。</p>
+<p>scaffolds：（中文：脚手架）功能：（配置目标样式）新添加博客文章（posts.md）、新添加博客页（page.md）、新添加草稿（draft.md）</p>
+<p>source：source是放置我们博客内容的地方，里面初始只有两个文件夹，一个是drafts（草稿），一个posts（文章），但之后我们通过命令新建tags（标签）还有categories（分类）页后，这里会相应地增加文件夹。</p>
+<p>themes：放置主题的目录.</p>
+<h3 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h3><p>Hexo有详尽的中文文档，网址：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a><br>主要的命令如下：</p>
+<p>init 新建网站</p>
+<pre><code>hexo init &lt;folder&gt;
+</code></pre><p>new 新建文章或页面</p>
+<pre><code>hexo new &lt;layout&gt; &quot;title&quot;
+
+layout可选参数（默认posts）：posts：文章、page：页面
+</code></pre><p>g (generate)生成静态页面</p>
+<pre><code>hexo generate
+hexo g //简写
+</code></pre><p>d 将内容部署到配置的服务器</p>
+<pre><code>hexo deploy
+hexo d //简写
+</code></pre><p>publish 发布内容（从drafts（草稿）文件夹移到posts（文章）文件夹）</p>
+<pre><code>hexo publish &lt;layout&gt; &lt;filename&gt;
+</code></pre><p>server 启动服务 默认访问：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<pre><code>hexo server
+hexo s //简写
+</code></pre><p>根据我的经验，除了第一次部署的时候需要用到hexo init 这个命令外，平时写博客最常用的：</p>
+<pre><code>hexo n 新建文章
+hexo s 启动服务
+hexo g 生成静态页面
+hexo d 发布
+</code></pre><h3 id="网站本地效果"><a href="#网站本地效果" class="headerlink" title="网站本地效果"></a>网站本地效果</h3><p>执行命令：hexo s<br>网站本地就启动了，访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-203647@2x.png" alt="avatar"></p>
+<h2 id="博客Github部署"><a href="#博客Github部署" class="headerlink" title="博客Github部署"></a>博客Github部署</h2><h3 id="创建存储库"><a href="#创建存储库" class="headerlink" title="创建存储库"></a>创建存储库</h3><p>命名必须用账号名，格式保持如下<br>例如：zhaoouyang316.github.io</p>
+<p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-204307@2x.png" alt="avatar"></p>
+<h3 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH-Key"></a>配置SSH-Key</h3><p>创建ssh-key，是为了执行hexo d部署的时候，可以发布到github</p>
+<pre><code>git config --global user.name youremail
+git config --global user.email youremail@example.com
+ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+</code></pre><p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-205204@2x.png" alt="avatar"></p>
+<p>由于我这里已经生成过了，ssh-keygen后面直接回车即可。<br>接着拷贝控制台打印的.ssh目录中的id_rsa.pub公钥，将内容复制到GitHub</p>
+<p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-205652@2x.png" alt="avatar"></p>
+<h3 id="同步本地代码至GitHub"><a href="#同步本地代码至GitHub" class="headerlink" title="同步本地代码至GitHub"></a>同步本地代码至GitHub</h3><p>执行hexo d 时需要安装一个插件：</p>
+<pre><code>npm install hexo-deployer-git
+</code></pre><p>修改config.yml文件：</p>
+<pre><code>type: git
+repo: git@github.com:zhaoouyang316/zhaoouyang316.github.io.git
+branch: master
+</code></pre><p>在命令行中执行：</p>
+<pre><code>hexo d
+</code></pre><p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-210336@2x.png" alt="avatar"></p>
+<p>此时已经同步代码到GitHub了。</p>
+<h3 id="打开GitHub-Pages"><a href="#打开GitHub-Pages" class="headerlink" title="打开GitHub-Pages"></a>打开GitHub-Pages</h3><p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-210518@2x.png" alt="avatar"></p>
+<p>打开 <a href="https://zhaoouyang316.github.io/" target="_blank" rel="noopener">https://zhaoouyang316.github.io/</a></p>
+<h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><ul>
+<li>注册域名</li>
+<li>进入万网进行域名绑定</li>
+<li>进入public,新建CNAME</li>
+<li>把域名写到CNAME里</li>
+<li>传到github仓库里</li>
+</ul>
+<p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-210950@2x.png" alt="avatar"></p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/WX20190407-200230@2x.png" alt="avatar"></p>
+<p>例如（配置next主题）：</p>
+<p>步骤一：下载next项目到themes文件夹</p>
+<pre><code>cd themes
+git clone https://github.com/iissnan/hexo-theme-next themes/next    
+</code></pre><p>步骤二：配置themes插件</p>
+<pre><code>//修改config.yml文件，主题设置为next
+theme: next
+</code></pre><p>添加统一的文章模板参数<br>把下面的内容加入到 scaffolds/post.md</p>
+<pre><code>cover_img:     # 在文章摘要上显示
+feature_img:   # 在文章详细页面上置顶
+description:   # 文章描述
+keywords:      # 关键字
+</code></pre><h3 id="valine-评论系统"><a href="#valine-评论系统" class="headerlink" title="valine 评论系统"></a>valine 评论系统</h3><pre><code>使用方法请到他的官网查看，并结合下面的配置文件详细添加appID和appKey
+https://valine.js.org/
+</code></pre>
           
         
       
@@ -660,6 +694,28 @@ cd blog
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'hLO7dJGy7sUwoBkDViMDpP9f-gzGzoHsz',
+        appKey: 'armR2k1OCD9g2gqtpvJilSIu',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
