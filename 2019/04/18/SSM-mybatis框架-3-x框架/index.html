@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="什么是 MyBatis？摘自官网：MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 Java 的 POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。">
+<meta name="description" content="MyBatis框架体系与ORM思想MyBatis是一款优秀的持久化框架，它支持定制化SQL，存粗过程以及高级映射，它可以使用简单的XML或注解来配置原生类型。 MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 J">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSM mybatis框架 3.x框架">
 <meta property="og:url" content="http://yoursite.com/2019/04/18/SSM-mybatis框架-3-x框架/index.html">
 <meta property="og:site_name" content="极客欧文">
-<meta property="og:description" content="什么是 MyBatis？摘自官网：MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 Java 的 POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。">
+<meta property="og:description" content="MyBatis框架体系与ORM思想MyBatis是一款优秀的持久化框架，它支持定制化SQL，存粗过程以及高级映射，它可以使用简单的XML或注解来配置原生类型。 MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 J">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-18T09:49:26.964Z">
+<meta property="og:image" content="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/1556105801188.jpg">
+<meta property="og:image" content="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/%E5%BD%93%E5%89%8D%E8%A1%A8%E6%94%AF%E6%8C%81%E4%B8%BB%E9%94%AE%E8%87%AA%E5%8A%A8%E5%A2%9E%E9%95%BF.jpg">
+<meta property="og:updated_time" content="2019-04-24T12:26:28.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSM mybatis框架 3.x框架">
-<meta name="twitter:description" content="什么是 MyBatis？摘自官网：MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 Java 的 POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。">
+<meta name="twitter:description" content="MyBatis框架体系与ORM思想MyBatis是一款优秀的持久化框架，它支持定制化SQL，存粗过程以及高级映射，它可以使用简单的XML或注解来配置原生类型。 MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 J">
+<meta name="twitter:image" content="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/1556105801188.jpg">
 
 
 
@@ -309,8 +312,41 @@
       
 
       
-        <h3 id="什么是-MyBatis？"><a href="#什么是-MyBatis？" class="headerlink" title="什么是 MyBatis？"></a>什么是 MyBatis？</h3><p>摘自官网：MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 Java 的 POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
-
+        <h2 id="MyBatis框架体系与ORM思想"><a href="#MyBatis框架体系与ORM思想" class="headerlink" title="MyBatis框架体系与ORM思想"></a>MyBatis框架体系与ORM思想</h2><p>MyBatis是一款优秀的持久化框架，它支持定制化SQL，存粗过程以及高级映射，它可以使用简单的XML或注解来配置原生类型。</p>
+<p>MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射.MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生类型、接口和 Java 的 POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录，并通过java对象和statement中sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
+<h3 id="Mybatis与Hibernate对比"><a href="#Mybatis与Hibernate对比" class="headerlink" title="Mybatis与Hibernate对比"></a>Mybatis与Hibernate对比</h3><p><strong>共性：</strong></p>
+<p>1 采用ORM思想解决了实体和数据库映射的问题，对jdbc进行了封装，屏蔽了jdbc api底层访问细节，使我们不用与jdbc api打交道，就可以完成对数据库的持久化操作。</p>
+<p>2 Hibernate和MyBatis都支持JDBC和JTA事务处理。</p>
+<p><strong>区别：</strong></p>
+<p><strong>Hibernate功能更加全面：</strong></p>
+<p>1 支持正向工程，只需修改属性，重启应用数据库便可以自动更新属性</p>
+<p>2 支持多数据库，方便数据库迁移</p>
+<p>3 简单增删查改已经做好了封装，不需要写sql，复杂的sql也可以通过代码实现，但不便于维护，开<br>发中复杂查询Sql会使用HQL语句；另外Mybatis通过插件”通用Mapper”也可以代码实现</p>
+<p>4 Hibernate支持实体映射配置，包括一对多，一对一，多对多。</p>
+<p>5 Hibernate优化时可以使用投影查询，懒加载，二级缓存</p>
+<p>在查询时限定查询的对象属性；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Query q = session.createQuery(&quot;select new User(u.name,u.sex) from User u&quot;); //对象查询 部分属性</span><br></pre></td></tr></table></figure>
+<p>懒加载（实体，集合，属性），当在真正需要数据的时候，才真正执行数据加载操作；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;hibernate-mapping&gt;</span><br><span class="line">　	&lt;class name=”com.neusoft.entity.User” table=”user” lazy=”true”&gt;</span><br><span class="line">  　……</span><br><span class="line">　	&lt;/class&gt;</span><br><span class="line"> &lt;/hibernate-mapping&gt;</span><br></pre></td></tr></table></figure>
+<p>6 Hibernate一级缓存是Session缓存，利用好一级缓存就需要对Session的生命周期进行管理好。建议在一个Action操作中使用一个Session。一级缓存需要对Session进行严格管理。</p>
+<pre><code>Hibernate二级缓存是SessionFactory级的缓存。 SessionFactory的缓存分为内置缓存和外置缓存。内置缓存中存放的是SessionFactory对象的一些集合属性包含的数据(映射元素据及预定SQL语句等),对于应用程序来说,它是只读的。外置缓存中存放的是数据库数据的副本,其作用和一级缓存类似.二级缓存除了以内存作为存储介质外,还可以选用硬盘等外部存储设备。二级缓存称为进程级缓存或SessionFactory级缓存，它可以被所有session共享，它的生命周期伴随着SessionFactory的生命周期存在和消亡。
+</code></pre><p><strong>MyBatis更加灵活：</strong></p>
+<p>1 MyBatis可以更加方便的进行更为细致的关联查询，SQL优化。</p>
+<p>2 MyBatis容易掌握，而Hibernate门槛较高。</p>
+<h2 id="Mybatis框架执行流程"><a href="#Mybatis框架执行流程" class="headerlink" title="Mybatis框架执行流程"></a>Mybatis框架执行流程</h2><p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/1556105801188.jpg" alt="avatar"></p>
+<p>  1 Configuration对象</p>
+<p>  2 dirty:<br>        true        提交事务<br>        false     事务回滚</p>
+<p>  3 Executor执行器对象：<br>        创建Statement对象，在创建过程中<br>        依靠MapperStatement对象赋值内容与Sql占位符进行绑定</p>
+<p>  4 SqlSession.commit().根据此时dirty属性决定提交和回滚</p>
+<p>  5 SqlSession.close();</p>
+<p><strong>费曼总结：</strong> </p>
+<p>Mybatis框架执行流程主要是通过Xml解析器读取xml配置文件中的sql标签，通过反射读取对象属性的值，赋值给解析出来的sql模版动态拼接。</p>
+<h2 id="Mybatis常用技术汇总"><a href="#Mybatis常用技术汇总" class="headerlink" title="Mybatis常用技术汇总"></a>Mybatis常用技术汇总</h2><h3 id="插入操作主键值获取"><a href="#插入操作主键值获取" class="headerlink" title="插入操作主键值获取"></a>插入操作主键值获取</h3><h5 id="插入操作主键值获取-1"><a href="#插入操作主键值获取-1" class="headerlink" title="插入操作主键值获取"></a>插入操作主键值获取</h5><p>在JDBC技术中,可以通过Statement接口中getGeneratedKeys()方法获得本次插入后得到自动增长主键值.MyBatis框架也采用这个技术.因此MyBatis在插入完毕后也可以获得本次插入数据id.做法如下</p>
+<p><img src="http://ppl5t3mrt.bkt.clouddn.com//image/owen/blog/%E5%BD%93%E5%89%8D%E8%A1%A8%E6%94%AF%E6%8C%81%E4%B8%BB%E9%94%AE%E8%87%AA%E5%8A%A8%E5%A2%9E%E9%95%BF.jpg" alt="avatar"></p>
+<h5 id="当前表不支持主键自动增长"><a href="#当前表不支持主键自动增长" class="headerlink" title="当前表不支持主键自动增长"></a>当前表不支持主键自动增长</h5><h3 id="查询操作"><a href="#查询操作" class="headerlink" title="查询操作"></a>查询操作</h3><h5 id="将查询结果封装为Map集合或则List集合"><a href="#将查询结果封装为Map集合或则List集合" class="headerlink" title="将查询结果封装为Map集合或则List集合"></a>将查询结果封装为Map集合或则List集合</h5><p>在SqlSession接口中,可以分别使用selectList方法和selectMap方法将查询结果分别封装为List集合和Map集合</p>
+<h5 id="查询单个记录"><a href="#查询单个记录" class="headerlink" title="查询单个记录"></a>查询单个记录</h5><h5 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h5><h5 id="properties"><a href="#properties" class="headerlink" title="properties"></a>properties</h5><h5 id="settings"><a href="#settings" class="headerlink" title="settings"></a>settings</h5><h5 id="typeAliases"><a href="#typeAliases" class="headerlink" title="typeAliases"></a>typeAliases</h5><h5 id="typeAliases-1"><a href="#typeAliases-1" class="headerlink" title="typeAliases"></a>typeAliases</h5><h5 id="environments环境"><a href="#environments环境" class="headerlink" title="environments环境"></a>environments环境</h5><h5 id="databaseIdProvider-数据库厂商标识"><a href="#databaseIdProvider-数据库厂商标识" class="headerlink" title="databaseIdProvider 数据库厂商标识"></a>databaseIdProvider 数据库厂商标识</h5><h3 id="mappers-映射器"><a href="#mappers-映射器" class="headerlink" title="mappers 映射器"></a>mappers 映射器</h3><h5 id="第一种（常用）"><a href="#第一种（常用）" class="headerlink" title="第一种（常用）"></a>第一种（常用）</h5><h5 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h5><h5 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h5><h5 id="第四种（推荐）"><a href="#第四种（推荐）" class="headerlink" title="第四种（推荐）"></a>第四种（推荐）</h5><h5 id="MyBatis中接口和对应mapper文件配置深入解析"><a href="#MyBatis中接口和对应mapper文件配置深入解析" class="headerlink" title="MyBatis中接口和对应mapper文件配置深入解析"></a>MyBatis中接口和对应mapper文件配置深入解析</h5><p>（1）    默认MAVEN构建 </p>
+<p>（2）    更改MAVEN配置</p>
+<h5 id="typeHandlers-类型转换器"><a href="#typeHandlers-类型转换器" class="headerlink" title="typeHandlers 类型转换器"></a>typeHandlers 类型转换器</h5><h3 id="MyBatis框架Mapper配置文件详解"><a href="#MyBatis框架Mapper配置文件详解" class="headerlink" title="MyBatis框架Mapper配置文件详解"></a>MyBatis框架Mapper配置文件详解</h3><h5 id="Mapper配置文件标签介绍"><a href="#Mapper配置文件标签介绍" class="headerlink" title="Mapper配置文件标签介绍"></a>Mapper配置文件标签介绍</h5>
       
     </div>
     
@@ -343,6 +379,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/23/学习方法论/" rel="prev" title="学习方法论">
+                学习方法论 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -422,7 +462,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -459,7 +499,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-MyBatis？"><span class="nav-number">1.</span> <span class="nav-text">什么是 MyBatis？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MyBatis框架体系与ORM思想"><span class="nav-number">1.</span> <span class="nav-text">MyBatis框架体系与ORM思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mybatis与Hibernate对比"><span class="nav-number">1.1.</span> <span class="nav-text">Mybatis与Hibernate对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis框架执行流程"><span class="nav-number">2.</span> <span class="nav-text">Mybatis框架执行流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis常用技术汇总"><span class="nav-number">3.</span> <span class="nav-text">Mybatis常用技术汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入操作主键值获取"><span class="nav-number">3.1.</span> <span class="nav-text">插入操作主键值获取</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#插入操作主键值获取-1"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">插入操作主键值获取</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#当前表不支持主键自动增长"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">当前表不支持主键自动增长</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询操作"><span class="nav-number">3.2.</span> <span class="nav-text">查询操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#将查询结果封装为Map集合或则List集合"><span class="nav-number">3.2.0.1.</span> <span class="nav-text">将查询结果封装为Map集合或则List集合</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查询单个记录"><span class="nav-number">3.2.0.2.</span> <span class="nav-text">查询单个记录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#模糊查询"><span class="nav-number">3.2.0.3.</span> <span class="nav-text">模糊查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#properties"><span class="nav-number">3.2.0.4.</span> <span class="nav-text">properties</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#settings"><span class="nav-number">3.2.0.5.</span> <span class="nav-text">settings</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#typeAliases"><span class="nav-number">3.2.0.6.</span> <span class="nav-text">typeAliases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#typeAliases-1"><span class="nav-number">3.2.0.7.</span> <span class="nav-text">typeAliases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#environments环境"><span class="nav-number">3.2.0.8.</span> <span class="nav-text">environments环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#databaseIdProvider-数据库厂商标识"><span class="nav-number">3.2.0.9.</span> <span class="nav-text">databaseIdProvider 数据库厂商标识</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#mappers-映射器"><span class="nav-number">3.3.</span> <span class="nav-text">mappers 映射器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一种（常用）"><span class="nav-number">3.3.0.1.</span> <span class="nav-text">第一种（常用）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二种"><span class="nav-number">3.3.0.2.</span> <span class="nav-text">第二种</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三种"><span class="nav-number">3.3.0.3.</span> <span class="nav-text">第三种</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第四种（推荐）"><span class="nav-number">3.3.0.4.</span> <span class="nav-text">第四种（推荐）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MyBatis中接口和对应mapper文件配置深入解析"><span class="nav-number">3.3.0.5.</span> <span class="nav-text">MyBatis中接口和对应mapper文件配置深入解析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#typeHandlers-类型转换器"><span class="nav-number">3.3.0.6.</span> <span class="nav-text">typeHandlers 类型转换器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyBatis框架Mapper配置文件详解"><span class="nav-number">3.4.</span> <span class="nav-text">MyBatis框架Mapper配置文件详解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Mapper配置文件标签介绍"><span class="nav-number">3.4.0.1.</span> <span class="nav-text">Mapper配置文件标签介绍</span></a></li></ol></li></div>
             
 
           </div>
